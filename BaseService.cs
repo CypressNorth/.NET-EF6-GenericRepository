@@ -104,10 +104,10 @@ namespace com.youapp.data.services
             _context.SaveChanges();
         }
 
-        public async void DeleteAsync(TObject t)
+        public async Task<int> DeleteAsync(TObject t)
         {
             _context.Set<TObject>().Remove(t);
-            await _context.SaveChangesAsync();
+            return await _context.SaveChangesAsync();
         }
 
         public int Count()
