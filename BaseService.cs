@@ -9,9 +9,9 @@ namespace com.youapp.data.services
 {
     public class BaseService<TObject> where TObject : class
     {
-        protected RecipeContext _context;
+        protected DataContext _context;
 
-        public BaseService(RecipeContext context)
+        public BaseService(DataContext context)
         {
             _context = context;
         }
