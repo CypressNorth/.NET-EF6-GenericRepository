@@ -15,7 +15,7 @@ namespace com.yourapp.data.services
         /// The contructor requires an open DataContext to work with
         /// </summary>
         /// <param name="context">An open DataContext</param>
-        public BaseGenericService(DataContext context)
+        public BaseService(DataContext context)
         {
             _context = context;
         }
