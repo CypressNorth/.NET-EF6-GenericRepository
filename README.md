@@ -1,7 +1,7 @@
-(Improved) .NET-EF6-GenericRepository
+(Extended) .NET-EF6-GenericRepository
 =====================================
 
-An enhanced version of "Generic Entity Framework 6 data repository for .NET 4.5 supporting both sync and async methods".
+An slightly enhanced version of "Generic Entity Framework 6 data repository for .NET 4.5 supporting both sync and async methods".
 
 #Credits
 Many thanks and appreciation to the main developer of the project: [Matt Mombrea](https://github.com/mombrea)
@@ -10,7 +10,7 @@ Many thanks and appreciation to the main developer of the project: [Matt Mombrea
 * Reference Data.Repository in your project, then bring BaseRepository class into your application scope to consume its functionality. 
 
 ```C#
-public class CategoryService : BaseRepository<Category,int>
+public class CategoryService : BaseRepository<Category>
 {
     public CategoryService(AppDbContext context)
         : base(context)
@@ -21,7 +21,7 @@ public class CategoryService : BaseRepository<Category,int>
 * Inherit from BaseRepository in your Repository or Service classes and initialize the constructor and base constructor with an optional data context.
 
 ```C#
-public class ComplexRepository<TEntity, TKey> : BaseRepository<TEntity, TKey> where TEntity : class
+public class ComplexRepository<TEntity> : BaseRepository<TEntity> where TEntity : class
 {
     public ComplexRepository(AppDbContext context = null)
         : base(context)
@@ -33,7 +33,7 @@ public class ComplexRepository<TEntity, TKey> : BaseRepository<TEntity, TKey> wh
 - All methods in BaseRepository are marked virtual to overriding convenience.
 
 ```C#
-public override async Task<Category> GetAsync(TKey id)
+public override async Task<Category> GetAsync(object id)
 {
     return await Db.Categories.SingleOrDefaultAsync(x => x.categoryID == id);
 }
