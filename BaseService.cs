@@ -192,16 +192,18 @@ namespace com.yourapp.data.services
         /// </summary>
         /// <remarks>Synchronous</remarks>
         /// <param name="t">The object to delete</param>
-        public void Delete(TObject t)
+        /// <returns>The number of affected entities</returns>
+        public int Delete(TObject t)
         {
             _context.Set<TObject>().Remove(t);
-            _context.SaveChanges();
+            return _context.SaveChanges();
         }
         /// <summary>
         /// Deletes a single object from the database and commits the change
         /// </summary>
         /// <remarks>Asynchronous</remarks>
         /// <param name="t">The object to delete</param>
+        /// <returns>The number of affected entities</returns>
         public async Task<int> DeleteAsync(TObject t)
         {
             _context.Set<TObject>().Remove(t);
