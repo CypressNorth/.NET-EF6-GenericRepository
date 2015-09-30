@@ -1,7 +1,7 @@
 (Extended) .NET-EF6-GenericRepository
 =====================================
 
-An slightly enhanced version of "Generic Entity Framework 6 data repository for .NET 4.5 supporting both sync and async methods".
+A slightly enhanced version of "Generic Entity Framework 6 data repository for .NET 4.5 supporting both sync and async methods".
 
 #Credits
 Many thanks and appreciation to the main developer of the project: [Matt Mombrea](https://github.com/mombrea)
