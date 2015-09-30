@@ -21,7 +21,7 @@ public class CategoryService : BaseRepository<Category>
 * Inherit from BaseRepository in your Repository or Service classes and initialize the constructor and base constructor with an optional data context.
 
 ```C#
-public class ComplexRepository<TEntity> : BaseRepository<TEntity> where TEntity : class
+public class ComplexRepository<T> : BaseRepository<T> where T : class
 {
     public ComplexRepository(AppDbContext context = null)
         : base(context)
