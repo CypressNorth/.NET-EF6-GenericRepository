@@ -1,10 +1,7 @@
-(Extended) .NET-EF6-GenericRepository
-=====================================
+.NET-EF6-GenericRepository
+==========================
 
-A slightly enhanced version of "Generic Entity Framework 6 data repository for .NET 4.5 supporting both sync and async methods".
-
-#Credits
-Many thanks and appreciation to the main developer of the project: [Matt Mombrea](https://github.com/mombrea)
+A Generic Entity Framework 6 data repository for .NET 4.5 supporting both sync and async methods
 
 #Usage
 * Reference Data.Repository in your project, then bring BaseRepository class into your application scope to consume its functionality. 
